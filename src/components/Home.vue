@@ -2,8 +2,8 @@
   <div class="home">
     <el-container class="home-container">
       <!-- 头部区域 -->
-      <el-header>
-        <img src="../assets/img/2.jpg" alt="" class="imgage" />
+      <el-header class="header">
+        <img src="../assets/img/FIF.png" alt="" class="imgage" />
         <div class="div1">
           <span class="v1">电商后台管理系统</span>
         </div>
@@ -17,7 +17,7 @@
         <el-aside :width="iscollapse ? '64px' : '200px'">
           <el-button type="warning" icon="el-icon-arrow-down" circle @click="toggle"></el-button>
           <!-- <div class="toggle-button">|||</div> -->
-          <el-menu background-color="#2e2834" text-color="#fff" active-text-color="pink" class="mr" unique-opened :collapse="iscollapse" :collapse-transition="false" router>
+          <el-menu background-color="#2e2834" text-color="#fff" active-text-color="pink" class="mr" unique-opened :collapse="iscollapse" :collapse-transition="false" router :default-active="activePath">
             <!-- 一级菜单啊 -->
             <el-submenu :index="item.id + ''" v-for="item in meunlist" :key="item.id">
               <!-- 一级菜单模板区域 -->
@@ -30,7 +30,7 @@
                 </div>
               </template>
               <!-- 二级菜单 -->
-              <el-menu-item :index="'/' + subItem.path + ''" v-for="subItem in item.children" :key="subItem.id">
+              <el-menu-item :index="'/' + subItem.path + ''" v-for="subItem in item.children" :key="subItem.id" @click="saveNavState('/' + subItem.path + '')">
                 <template slot="title">
                   <!-- 图标 -->
                   <i class="el-icon-star-on"></i>
@@ -64,10 +64,13 @@ export default {
         145: 'el-icon-s-platform',
       },
       iscollapse: false,
+      // 被激活的链接地址
+      activePath :''
     }
   },
   created() {
     this.getMenuList()
+    this.activePath = window.sessionStorage.getItem('activePath')
   },
   methods: {
     logout() {
@@ -86,11 +89,20 @@ export default {
     toggle() {
       this.iscollapse = !this.iscollapse
     },
+    // 保存链接的保存状态
+    saveNavState(active) {
+      window.sessionStorage.setItem('activePath', active)
+      this.activePath = active
+    },
   },
 }
 </script>
 
 <style lang="less" scoped>
+.header{
+  border-bottom: 2px solid rgb(31, 26, 26) ;
+  box-shadow: 0 2px 5px rgba(104, 56, 56, 0.2);
+}
 .ccc {
   height: 30px;
   width: 30px;
@@ -126,8 +138,9 @@ export default {
 }
 .imgage {
   //   position: absolute;
+  margin-top: 32px;
   width: 100px;
-  height: 50px;
+  height: 100px;
   //   top: 5px;
 }
 .el-header,
@@ -165,12 +178,10 @@ export default {
 body > .el-container {
   margin-bottom: 40px;
 }
-
 .el-container:nth-child(5) .el-aside,
 .el-container:nth-child(6) .el-aside {
   line-height: 260px;
 }
-
 .el-container:nth-child(7) .el-aside {
   line-height: 320px;
 }

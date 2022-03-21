@@ -1,0 +1,22 @@
+.el-table{
+    margin-top: 15px;
+    font-size: 14px;
+}
+/* .el-header{
+    background-image: url("../assets/img/11.png") ;
+}
+.el-aside{
+    background-image: url("../assets/img/99.jpg") ;
+} */
+.el-pagination{
+    margin-top: 15px;
+    line-height: 20px;
+    transform: translate(70px);
+}
+.el-dialog{
+    line-height: 20px;
+}
+.el-dialog__title{
+    position: absolute;
+    left: 3%;
+}
