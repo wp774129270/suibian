@@ -97,7 +97,6 @@ export default {
   },
 }
 </script>
-
 <style lang="less" scoped>
 .header{
   border-bottom: 2px solid rgb(31, 26, 26) ;
@@ -168,12 +167,6 @@ export default {
   line-height: 10px;
 }
 
-.el-main {
-  background-color: #e9edf0;
-  color: #333;
-  text-align: center;
-  line-height: 160px;
-}
 
 body > .el-container {
   margin-bottom: 40px;
@@ -182,6 +175,7 @@ body > .el-container {
 .el-container:nth-child(6) .el-aside {
   line-height: 260px;
 }
+
 .el-container:nth-child(7) .el-aside {
   line-height: 320px;
 }

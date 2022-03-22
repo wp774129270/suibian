@@ -1,22 +1,57 @@
-.el-table{
+
+.el-table {
     margin-top: 15px;
     font-size: 14px;
 }
+
 /* .el-header{
     background-image: url("../assets/img/11.png") ;
 }
 .el-aside{
     background-image: url("../assets/img/99.jpg") ;
 } */
-.el-pagination{
+.el-pagination {
     margin-top: 15px;
     line-height: 20px;
     transform: translate(70px);
 }
-.el-dialog{
+
+.el-dialog {
     line-height: 20px;
 }
-.el-dialog__title{
+
+.el-dialog__title {
     position: absolute;
     left: 3%;
+}
+
+.el-card {
+    margin-top: 20px;
+}
+
+.el-main {
+    background-color: #e9edf0;
+    color: #333;
+
+}
+.el-tag{
+    margin: 12px 15px;
+}
+.bdtop{
+    border-top: 1px solid #eee;
+    /* display: flex;
+    align-items: center; */
+}
+.bdbottom{
+    border-bottom: 1px solid #eee;
+}
+    /* .el-col{
+        width: 120px;
+    }
+    .el-icon-caret-right{
+        line-height: 74px;
+    } */
+.cel{
+    display: flex;
+    align-items: center;
 }
