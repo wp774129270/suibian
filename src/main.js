@@ -5,6 +5,7 @@ import './assets/global.css'
 import axios from 'axios'
 import './plugins/element.js'
 import TreeTable from 'vue-table-with-tree-grid'
+import Bread from './components/bread/bread.vue'
 
 // import { Form, FormItem, Input, Button } from 'element-ui'
 // 配置请求的根路径
@@ -17,6 +18,9 @@ axios.interceptors.request.use(config => {
 Vue.prototype.$http = axios
 
 Vue.component('tree-table', TreeTable)
+
+// 面包屑
+Vue.component('bread', Bread)
 
 // Vue.use(Form)
 // Vue.use(FormItem)

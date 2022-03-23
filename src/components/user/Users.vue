@@ -318,10 +318,10 @@ export default {
       this.setRoleDialogVisible = false
     },
     // 监听分配角色对话框的关闭事件
-    setRoleDialogClosed(){
+    setRoleDialogClosed() {
       this.selectedRoleId = ''
       this.userInfo = {}
-    }
+    },
   },
 }
 </script>
@@ -347,8 +347,6 @@ export default {
 
 .box-card {
   margin-top: 25px;
-  //   padding: 50px;
-  //   width: 480px;
   font-size: 16px;
   box-shadow: 0 1px 5px rgb(0, 0, 0, 0.2);
 }
