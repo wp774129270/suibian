@@ -4,6 +4,7 @@ import router from './router'
 import './assets/global.css'
 import axios from 'axios'
 import './plugins/element.js'
+import TreeTable from 'vue-table-with-tree-grid'
 
 // import { Form, FormItem, Input, Button } from 'element-ui'
 // 配置请求的根路径
@@ -14,6 +15,8 @@ axios.interceptors.request.use(config => {
   return config
 })
 Vue.prototype.$http = axios
+
+Vue.component('tree-table', TreeTable)
 
 // Vue.use(Form)
 // Vue.use(FormItem)

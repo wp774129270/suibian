@@ -1,4 +1,3 @@
-
 .el-table {
     margin-top: 15px;
     font-size: 14px;
@@ -34,24 +33,36 @@
     color: #333;
 
 }
-.el-tag{
+
+.el-tag {
     margin: 12px 15px;
 }
-.bdtop{
+
+.bdtop {
     border-top: 1px solid #eee;
     /* display: flex;
     align-items: center; */
 }
-.bdbottom{
+
+.bdbottom {
     border-bottom: 1px solid #eee;
 }
-    /* .el-col{
+
+/* .el-col{
         width: 120px;
     }
     .el-icon-caret-right{
         line-height: 74px;
     } */
-.cel{
+.cel {
     display: flex;
     align-items: center;
+}
+
+.zk-table {
+    margin-top: 20px;
+}
+
+.el-cascader-menu {
+    height: 200px;
 }
