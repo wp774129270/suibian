@@ -70,3 +70,13 @@
 .el-alert {
     margin-bottom: 20px;
 }
+.el-step__title{
+    font-size: 12px;
+    font-weight: 800;
+}
+.el-tabs{
+    margin-top: 40px;
+}
+.el-tab-pane {
+    margin-left: 50px;
+}
